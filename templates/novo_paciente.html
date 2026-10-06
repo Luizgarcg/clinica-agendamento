@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>novo paciente</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="telefone" placeholder="Telefone">
+        <input type="number" name="idade" placeholder="Idade">
+        <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
