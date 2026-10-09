@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar consulta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Agendar consulta</h1>
+    <form class="formulario" method="post">
+        <select name="id_paciente" required>
+            <option value="">Paciente</option>
+            {% for p in pacientes %}
+                <option value="{{ p[0] }}">{{ p[1] }}</option>
+            {% endfor %}
+        </select>
+        <select name="id_medico" required>
+            <option value="">Médico</option>
+            {% for m in medicos %}
+                <option value="{{ m[0] }}">{{ m[1] }} - {{ m[2] }}</option>
+            {% endfor %}
+        </select>
+        <input type="date" name="dia" required>
+        <input type="time" name="horario" required>
+        <button type="submit">Agendar</button>
+    </form>
+    <a class="botao" href="/consultas">Voltar</a>
+</body>
+</html>

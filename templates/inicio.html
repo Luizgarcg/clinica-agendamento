@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>paciente</title>
 </head>
 <body>
-     <div>
-         <h1>Pacientes</h1>
-             {% for p in pacientes %}
-            <p>{{ p[1] }} - {{ p[2] }} - {{ p[3] }} anos</p>
-             {% endfor %}
-     </div>
-     <a href="/pacientes/novo">Novo paciente</a>
+    <h1>Clínica</h1>
+    <nav class="menu">
+        <a class="botao" href="/pacientes">Pacientes</a>
+        <a class="botao" href="/medicos">Médicos</a>
+        <a class="botao" href="/consultas">Consultas</a>
+    </nav>
 </body>
 </html>
